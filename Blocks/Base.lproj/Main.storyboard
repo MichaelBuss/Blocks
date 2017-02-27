@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E163f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gwF-bA-gau">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Vh8-kX-3RN">
+            <objects>
+                <navigationController storyboardIdentifier="navigationControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gwF-bA-gau" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iqu-Zb-KWe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YsP-5O-B9g" kind="relationship" relationship="rootViewController" id="dgD-sy-Vyt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biA-Q6-faU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="601"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="p8G-zm-5y1">
+            <objects>
+                <viewController storyboardIdentifier="homeViewControllerID" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YsP-5O-B9g" customClass="ViewController" customModule="Blocks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQc-Sm-Puu"/>
+                        <viewControllerLayoutGuide type="bottom" id="20A-bH-lLK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8QW-er-4Eh">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="FGD-xB-rzy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="t9s-X6-kkO">
+                            <connections>
+                                <action selector="newAlertAction:" destination="YsP-5O-B9g" id="rwm-Ga-VP7"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="edit" id="Q0g-PY-3Lx"/>
+                            <barButtonItem systemItem="search" id="hvm-Fi-g0i"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="VcC-Tg-XO0" kind="show" id="xcl-F6-Va8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fko-Fd-AKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="601"/>
+        </scene>
+        <!--Editor-->
+        <scene sceneID="0Y4-4Z-Hxq">
+            <objects>
+                <viewController storyboardIdentifier="editorViewControllerID" title="Editor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VcC-Tg-XO0" customClass="EditorViewController" customModule="Blocks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="47l-bi-uUr"/>
+                        <viewControllerLayoutGuide type="bottom" id="j6d-m0-Iwa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Asx-cO-dAB">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-qG-G7Y">
+                                <rect key="frame" x="491" y="374" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hOE-qG-G7Y" firstAttribute="centerX" secondItem="Asx-cO-dAB" secondAttribute="centerX" id="XJh-Er-cw1"/>
+                            <constraint firstItem="hOE-qG-G7Y" firstAttribute="centerY" secondItem="Asx-cO-dAB" secondAttribute="centerY" id="jVV-jf-xpJ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sc0-bi-OPv" appends="YES" id="XhW-oP-Pjm"/>
+                            <outletCollection property="gestureRecognizers" destination="sc0-bi-OPv" appends="YES" id="jgn-Rc-8aM"/>
+                            <outletCollection property="gestureRecognizers" destination="sc0-bi-OPv" appends="YES" id="p5C-Jy-k4c"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="viewOutlet" destination="Asx-cO-dAB" id="Dzi-kx-MV2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEC-Lp-UgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="sc0-bi-OPv">
+                    <connections>
+                        <action selector="pinchToZoomAction:" destination="VcC-Tg-XO0" id="7Is-5Y-daJ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1540" y="601"/>
+        </scene>
+    </scenes>
+</document>
