@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         newAlert.addTextField { (textField:UITextField) in
             textField.placeholder = "Enter name here"
             textField.text = "New program"
+            textField.becomeFirstResponder()
+            textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
+
         }
         
         newAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action:UIAlertAction) in
@@ -49,16 +52,5 @@ class ViewController: UIViewController {
         newAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(newAlert, animated: true, completion: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func pushStoryBoardWithTitle(viewControllerID: UIViewController, title: String) {
-        print("nothing here yet")
-    }
-
+    } // Present alert for entering program name
 }
-
